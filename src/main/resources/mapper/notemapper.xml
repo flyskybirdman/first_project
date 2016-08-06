@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"      
+ "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+ <mapper namespace="com.zp.cloudnote.dao.NoteDAO">
+ 	<select id="findByBookId" parameterType="string" resultType="map">
+ 		select cn_note_id,cn_note_title from cn_note where cn_notebook_id=#{bookid}
+ 	</select>
+ 	<select id="findById" parameterType="string" resultType="com.zp.cloudnote.entity.Note">
+ 		select * from cn_note where cn_note_id=#{noteid}
+ 	</select>
+ </mapper>

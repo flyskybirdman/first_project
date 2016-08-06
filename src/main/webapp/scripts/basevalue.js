@@ -1,0 +1,1 @@
+basepath="http://localhost:8080/cloudnote-work"
